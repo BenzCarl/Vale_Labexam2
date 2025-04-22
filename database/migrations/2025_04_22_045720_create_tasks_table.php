@@ -8,11 +8,11 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('tasks', function (Blueprint $table) {
-            $table->id(); // Unique identifier for the task
-            $table->string('title'); // Task title
-            $table->text('description'); // Task description
-            $table->boolean('is_completed')->default(false); // Status of the task
-            $table->timestamps(); // Created and updated timestamps
+            $table->id(); 
+            $table->string('title'); 
+            $table->text('description'); 
+            $table->boolean('is_completed')->default(false);
+            $table->timestamps();
         });
     }
 

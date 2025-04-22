@@ -4,25 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task Manager</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-light">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="{{ route('tasks.index') }}">Task Manager</a>
-            <div class="navbar-nav">
-                <a class="nav-link" href="{{ route('tasks.index') }}">Home</a>
-                <a class="nav-link" href="{{ route('tasks.create') }}">Add Task</a>
-            </div>
-        </div>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-blue-600 text-white p-4 flex justify-between">
+        <h1 class="text-xl font-bold text-center">Task Manager</h1>
+        
     </nav>
 
-    <div class="container mt-4">
-        @if(session('success'))
-            <div class="alert alert-success">{{ session('success') }}</div>
-        @endif
-        
+    <div class="container mx-auto p-6">
         @yield('content')
     </div>
+
+    
 </body>
 </html>
